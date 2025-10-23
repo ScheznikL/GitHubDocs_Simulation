@@ -106,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 288.5,
+    "collapsed": true
   },
   "right": {
     "id": "27fa24057cffbb4d",
@@ -200,6 +201,7 @@
   },
   "active": "cbd429e2b4801210",
   "lastOpenFiles": [
+    "lb/Simulation_Lab_2/2025-10-23_084610.jpg",
     "lb/Simulation_Lab1/Lr1_Bukharova.md",
     "lb/Simulation_Lab_2/Lr2_Bukharova.md",
     "lb/Simulation_Lab_2/Pasted_image_20251023082614.png",
