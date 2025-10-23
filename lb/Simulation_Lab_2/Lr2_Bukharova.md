@@ -49,9 +49,7 @@ end
 ```
 
 У відповідності до формули:
-$
-\text{EffectiveRecoveryChance} = \text{chance\_recover} - \left( \frac{\text{age}}{\text{lifespan}} \times \text{age\_factor} \right)
-$
+$$\text{EffectiveRecoveryChance}=\text{chanceRecover}-\left(\frac{\text{age}}{\text{lifespan}}\times\text{ageFactor}\right)$$
 Слід додати, що у цьому завданні враховано зміну тривалості життя популяції, що описано нижче та додано ініціалізацію змінної age-factor як динамічної, що обраховується для кожного агенту:
 
 ```netlogo
@@ -98,7 +96,7 @@ set immunity-duration 52
 
 Однак, у реальному світі різні захворювання можуть по-різному впливати на організм людини та відповідно тривалість імунітету не є постійною, так додано відповідну змінну величину, що залежить від тривалості життя популяції:
 
-![[Pasted image 20251021160931.png]]
+![Скріншот моделі в процесі симуляції](Pasted_image_20251021160931.png)
 
 З урахуванням означення рецидиву (*Рецидив при інфекційних хворобах пояснюють тією обставиною, що [збудник](https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D1%82%D0%BE%D0%B3%D0%B5%D0%BD "Патоген") у ході лікування не повністю зникає з організму і, за певних умов, знову спричинює повернення хвороби у вигляді швидкого відновлення клінічних ознак, [симптомів](https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BC%D0%BF%D1%82%D0%BE%D0%BC "Симптом") захворювання*.) було змінено процедуру recover-or-die на recover-or-die-or-recidere:
 
@@ -149,12 +147,10 @@ globals
 setxy random-xcor random-ycor
 ```
 Та у відповідності до внесених змін за відповідною формулою:
-$$
-\begin{align*}
-\text{X} &= \text{center\_x} + \left( \text{random-float}(2R) - R \right) \\
-\text{Y} &= \text{center\_y} + \left( \text{random-float}(2R) - R \right)
-\end{align*}
-$$
+```math
+$$\begin{align*} \text{X}=\text{center-X}+\left( \text{random-float}(2R) - R \right) \\
+\text{Y}=\text{center-Y} + \left( \text{random-float}(2R) - R \right) \end{align*}$$
+```
 Виконується встановлення координат:
 ```
       set group-id random num-groups  
