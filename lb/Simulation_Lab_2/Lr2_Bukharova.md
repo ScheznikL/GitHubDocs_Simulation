@@ -49,9 +49,9 @@ end
 ```
 
 У відповідності до формули:
-$$
+$
 \text{EffectiveRecoveryChance} = \text{chance\_recover} - \left( \frac{\text{age}}{\text{lifespan}} \times \text{age\_factor} \right)
-$$
+$
 Слід додати, що у цьому завданні враховано зміну тривалості життя популяції, що описано нижче та додано ініціалізацію змінної age-factor як динамічної, що обраховується для кожного агенту:
 
 ```netlogo
