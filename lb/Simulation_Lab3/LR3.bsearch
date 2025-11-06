@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE search SYSTEM "behaviorsearch.dtd">
+<search>
+    <bsearchVersionNumber>1,10</bsearchVersionNumber>
+    <modelInfo>
+        <modelFile>D:\&#1042;&#1059;&#1047;\&#1050;&#1057;&#1030;&#1052;\GitHubDocs_Simulation\lb\Simulation_Lab_2\Virus.nlogox</modelFile>
+        <modelSetupCommands>setup</modelSetupCommands>
+        <modelStepCommands>go</modelStepCommands>
+        <modelStopCondition/>
+        <modelStepLimit>104</modelStepLimit>
+        <modelMetricReporter>max-infected-peak</modelMetricReporter>
+        <modelMeasureIf>true</modelMeasureIf>
+    </modelInfo>
+    <fitnessInfo>
+        <fitnessMinimized>true</fitnessMinimized>
+        <fitnessCollecting>AT_FINAL_STEP</fitnessCollecting>
+        <fitnessSamplingReplications>10</fitnessSamplingReplications>
+        <fitnessCombineReplications>MEAN</fitnessCombineReplications>
+    </fitnessInfo>
+    <searchSpace>
+        <paramSpec>["duration" [0 1 99]]</paramSpec>
+        <paramSpec>["chance-recover" [0 1 99]]</paramSpec>
+        <paramSpec>["infectiousness" [0 1 99]]</paramSpec>
+        <paramSpec>["number-people" 150]</paramSpec>
+        <paramSpec>["turtle-shape" "person" "circle"]</paramSpec>
+        <paramSpec>["population-age-limit" [50 1 100]]</paramSpec>
+        <paramSpec>["immunity-duration" 252]</paramSpec>
+        <paramSpec>["chance-reinfect" [0 1 99]]</paramSpec>
+        <paramSpec>["group-radius" [5 1 16]]</paramSpec>
+        <paramSpec>["incubation-period" [0 1 10]]</paramSpec>
+    </searchSpace>
+    <searchMethod type="StandardGA">
+        <searchMethodParameter name="mutation-rate" value="0.01"/>
+        <searchMethodParameter name="population-size" value="50"/>
+        <searchMethodParameter name="tournament-size" value="3"/>
+        <searchMethodParameter name="population-model" value="generational"/>
+        <searchMethodParameter name="crossover-rate" value="0.7"/>
+    </searchMethod>
+    <chromosomeRepresentation type="GrayBinaryChromosome"/>
+    <caching>true</caching>
+    <evaluationLimit>5000</evaluationLimit>
+    <bestCheckingNumReplications>0</bestCheckingNumReplications>
+</search>
